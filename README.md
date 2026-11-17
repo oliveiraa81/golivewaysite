@@ -17,10 +17,18 @@ assets/img/             Imagens, ícones, imagem Open Graph
 
 | Placeholder | Onde | O quê |
 |---|---|---|
-| `CONTACT_EMAIL` | `assets/js/main.js` (bloco `CONFIG`) | Destino dos pedidos do formulário (por omissão `mail@goliveway.win`) |
-| `UPDATES_URL` | `assets/js/main.js` (bloco `CONFIG`) | Página/blog/newsletter para informação adicional e atualizações |
+| `CONTACT_EMAIL` | `server.py` / `assets/js/main.js` | Destino dos pedidos do formulário (`mail@goliveway.win`) |
+| `UPDATES_URL` | `assets/js/main.js` (bloco `CONFIG`) | LinkedIn da empresa (`https://linkedin.com/company/goliveway`) |
 
-O CTA «Marcar chamada de 30 min» abre um formulário (nome, telefone opcional, email obrigatório, descrição). O envio usa [FormSubmit](https://formsubmit.co/) para o email de destino. Na **primeira** submissão, confirme o endereço em `mail@goliveway.win` (email de activação do FormSubmit).
+O CTA «Marcar chamada de 30 min» abre um formulário (nome, telefone opcional, email obrigatório, descrição). Os pedidos são gravados em SQLite (`data/contacts.sqlite`) pelo `server.py` e também notificados por email para `mail@goliveway.win` (FormSubmit; na primeira submissão confirme o email de activação).
+
+Pesquisar pedidos guardados:
+
+```bash
+python3 deploy/list-contacts.py
+python3 deploy/list-contacts.py "texto"
+python3 deploy/list-contacts.py --email alguém@exemplo.pt
+```
 | `SITE_URL` | `index.html` (`<head>`: canonical, hreflang, `og:url`, `og:image`) | Endereço final do site, ex.: `https://www.exemplo.pt` (sem barra final) |
 | `[resultado medido: preencher]` | `index.html` caso Planner + `i18n.js` chave `case1.result` | Resultado do Planner |
 | `[X h → Y min por relatório]`, `[taxa de erro: preencher]` | `index.html` caso avaliação + `i18n.js` chaves `case2.m1`, `case2.m2` | Métricas antes/depois da avaliação imobiliária |
@@ -65,7 +73,7 @@ Pode abrir o `index.html` com duplo clique. Para um teste mais fiel ao servidor:
 
 ```bash
 cd <pasta do site>
-python3 -m http.server 8080
+python3 server.py
 # abrir http://localhost:8080
 ```
 

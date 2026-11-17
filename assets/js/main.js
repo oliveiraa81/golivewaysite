@@ -2,8 +2,7 @@
  *  CONFIGURAÇÃO
  * ===================================================================== */
 var CONFIG = {
-  CONTACT_EMAIL: "mail@goliveway.win",
-  UPDATES_URL: "UPDATES_URL"      // ex.: blog, newsletter ou página de atualizações
+  UPDATES_URL: "https://linkedin.com/company/goliveway"
 };
 /* ===================================================================== */
 
@@ -22,6 +21,10 @@ var CONFIG = {
       var url = map[a.getAttribute("data-link")];
       if (url) {
         a.href = url;
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener noreferrer");
+        a.classList.remove("is-placeholder");
+        a.removeAttribute("title");
       } else {
         a.href = "#contacto";
         a.removeAttribute("target");
@@ -248,14 +251,13 @@ var CONFIG = {
       var payload = {
         name: name,
         email: email,
-        phone: phone || "(não indicado)",
+        phone: phone,
         description: description,
-        _subject: "Pedido de chamada — Go Live Way",
-        _template: "table",
-        _replyto: email
+        lang: currentLang(),
+        _gotcha: honey ? honey.value : ""
       };
 
-      fetch("https://formsubmit.co/ajax/" + encodeURIComponent(CONFIG.CONTACT_EMAIL), {
+      fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -265,7 +267,7 @@ var CONFIG = {
       })
         .then(function (res) {
           return res.json().then(function (data) {
-            if (!res.ok) throw new Error((data && data.message) || "fail");
+            if (!res.ok || !data || !data.ok) throw new Error((data && data.error) || "fail");
             return data;
           });
         })

@@ -134,7 +134,7 @@ window.I18N_EN = {
 
   "contact.title": "Shall we find where your operation loses time?",
   "contact.text": "Book a 30-minute call, no strings attached. You will leave with a clear idea of what can be optimised or automated and where to start.",
-  "contact.updates": "Follow for updates",
+  "contact.updates": "Follow us on LinkedIn",
 
   "form.title": "Book a 30-min call",
   "form.lead": "Leave your details and a short description. We will reply to schedule the conversation.",
