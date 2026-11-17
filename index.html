@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tema claro/escuro aplicado antes de desenhar a página (evita o "flash") -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("site-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <!-- =====================================================================
+       PLACEHOLDER: substituir SITE_URL pelo endereço final do site
+       (ex.: https://www.exemplo.pt) nas tags canonical e Open Graph.
+       ===================================================================== -->
+  <title>Go Live Way | Automação com IA e sistemas para empresas</title>
+  <meta name="description" content="Automação com IA, sistemas e otimização de processos para controlo e produtividade das empresas. Mapeamento de processos, implementação de sistemas, automação documental com IA e aplicações internas. Porto, Portugal.">
+  <meta name="author" content="Go Live Way">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="SITE_URL">
+  <link rel="alternate" hreflang="pt-PT" href="SITE_URL">
+  <link rel="alternate" hreflang="en" href="SITE_URL?lang=en">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:site_name" content="Go Live Way">
+  <meta property="og:title" content="Go Live Way | Automação com IA e sistemas para empresas">
+  <meta property="og:description" content="Tiramos a burocracia das operações com IA e os sistemas certos. Otimização de processos, sistemas e automação com IA para empresas.">
+  <meta property="og:url" content="SITE_URL">
+  <meta property="og:image" content="SITE_URL/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Go Live Way: automação com IA e sistemas para empresas">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#06182A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo" data-i18n="skip">Saltar para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container nav">
+      <a class="brand" href="#topo" aria-label="Go Live Way">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FD8FF"/><stop offset="1" stop-color="#3A9EEA"/></linearGradient></defs>
+          <rect width="40" height="40" rx="11" fill="url(#bm)"/>
+          <path d="M9 27 C 15 27, 15 13, 21 13 S 27 21, 31 15" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+          <circle cx="9" cy="27" r="3" fill="#fff"/>
+          <path d="M27.5 12.5 L 32 14.6 L 30.4 19.2" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">Go Live Way</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Principal" data-i18n-aria="aria.nav">
+        <a href="#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="#casos" data-i18n="nav.cases">Casos</a>
+        <a href="#metodo" data-i18n="nav.method">Como trabalhamos</a>
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="seg lang-toggle" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <div class="seg theme-toggle" role="group" aria-label="Tema" data-i18n-aria="aria.theme">
+          <button type="button" data-theme-set="light" aria-pressed="true" title="Modo claro" data-i18n-title="theme.light"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="sr" data-i18n="theme.light">Modo claro</span></button>
+          <button type="button" data-theme-set="dark" aria-pressed="false" title="Modo escuro" data-i18n-title="theme.dark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr" data-i18n="theme.dark">Modo escuro</span></button>
+        </div>
+        <button class="menu-btn" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Automação com IA e sistemas para controlo e produtividade das empresas</p>
+          <h1 data-i18n="hero.title">Tiramos a burocracia das operações com IA e os sistemas certos.</h1>
+          <p class="lead" data-i18n="hero.lead">Conhecemos as operações por dentro e as ferramentas de IA que as libertam de trabalho repetitivo. Começamos por encontrar o ponto que mais trava a sua empresa, resolvemo-lo e medimos o resultado.</p>
+          <div class="hero-cta">
+            <button type="button" class="btn btn-primary" data-open-contact data-i18n="cta.call">Marcar chamada de 30 min</button>
+            <a class="btn btn-ghost" href="#casos" data-i18n="cta.cases">Ver casos reais</a>
+          </div>
+          <ul class="chips" aria-label="Abordagem" data-i18n-aria="aria.approach">
+            <li data-i18n="chip.1">Mapeamento de processos</li>
+            <li data-i18n="chip.2">Eliminação de desperdício</li>
+            <li data-i18n="chip.3">Procedimentos normalizados</li>
+            <li data-i18n="chip.4">Automação com IA</li>
+            <li data-i18n="chip.5">Indicadores</li>
+          </ul>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="edge">
+            <div class="edge-col">
+              <span class="edge-title" data-i18n="edge.ops">Operações</span>
+              <span data-i18n="edge.o1">Processos</span><span data-i18n="edge.o2">Bloqueios</span><span data-i18n="edge.o3">Procedimentos</span><span data-i18n="edge.o4">Indicadores</span>
+            </div>
+            <div class="edge-plus">+</div>
+            <div class="edge-col">
+              <span class="edge-title" data-i18n="edge.ai">IA</span>
+              <span data-i18n="edge.a1">Documentos</span><span data-i18n="edge.a2">Agentes</span><span data-i18n="edge.a3">Validação</span><span data-i18n="edge.a4">Aplicações</span>
+            </div>
+          </div>
+          <div class="edge-result" data-i18n="edge.result">= resultados mensuráveis no dia a dia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== DIFERENÇA ============================== -->
+    <section class="band">
+      <div class="container band-grid">
+        <h2 class="h3" data-i18n="why.title">Porque é diferente</h2>
+        <p data-i18n="why.text">Muitos consultores sabem de tecnologia <em>ou</em> de operações. Nós trabalhamos nos dois lados: já implementámos sistemas em empresas industriais e de logística, levantámos requisitos, testámos e formámos utilizadores. Por isso a automação que propomos encaixa nos processos reais e não fica a ser uma demonstração.</p>
+      </div>
+    </section>
+
+    <!-- ============================ PRINCÍPIOS ============================ -->
+    <section class="section" id="principios">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="pr.eyebrow">Como pensamos</p>
+          <h2 data-i18n="pr.title">Otimizar primeiro, automatizar depois</h2>
+          <p class="section-lead" data-i18n="pr.lead">A tecnologia é só uma parte do trabalho. O resto é perceber o processo, decidir o que mudar e garantir que a mudança fica.</p>
+        </header>
+        <div class="principles">
+          <article class="principle">
+            <span class="principle-n">01</span>
+            <h3 data-i18n="pr1.title">Primeiro o bloqueio</h3>
+            <p data-i18n="pr1.text">Uma operação anda à velocidade do seu passo mais lento. Melhorar outro ponto qualquer quase não muda o resultado, por isso começamos por encontrar o que realmente trava.</p>
+          </article>
+          <article class="principle">
+            <span class="principle-n">02</span>
+            <h3 data-i18n="pr2.title">Do objetivo à tarefa</h3>
+            <p data-i18n="pr2.text">Partimos cada objetivo em ações pequenas e concretas. Fica claro o que se elimina, o que se normaliza e o que vale a pena automatizar.</p>
+          </article>
+          <article class="principle">
+            <span class="principle-n">03</span>
+            <h3 data-i18n="pr3.title">Testado com casos reais</h3>
+            <p data-i18n="pr3.text">Cada automação é posta à prova com um conjunto de casos reais antes de entrar em uso e é afinada até ser fiável.</p>
+          </article>
+          <article class="principle">
+            <span class="principle-n">04</span>
+            <h3 data-i18n="pr4.title">Medido do início ao fim</h3>
+            <p data-i18n="pr4.text">Medimos o ponto de partida antes de mexer em nada, para que o ganho se veja em números e não em impressões.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SERVIÇOS ============================ -->
+    <section class="section section-alt" id="servicos">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="services.eyebrow">Serviços</p>
+          <h2 data-i18n="services.title">Três formas de ganhar controlo e tempo</h2>
+        </header>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 4h7v7H3zM14 4h7v7h-7zM3 15h7v5H3zM14 15h7v5h-7z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 7.5h4M17.5 11v4M6.5 11v4" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 data-i18n="s1.title">Mapeamento de processos e implementação de sistemas</h3>
+            <p data-i18n="s1.text">Do levantamento de requisitos ao arranque: mapeamos os fluxos de trabalho, eliminamos passos sem valor, configuramos o software, migramos e validamos dados, testamos e formamos a equipa.</p>
+            <ul class="ticks">
+              <li data-i18n="s1.l1">Mapeamento do processo e dos bloqueios</li>
+              <li data-i18n="s1.l2">Implementação e migração de dados</li>
+              <li data-i18n="s1.l3">Testes de aceitação e formação</li>
+            </ul>
+          </article>
+          <article class="card card-accent">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 3v4h4M9 12h6M9 15h6M9 18h4" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 data-i18n="s2.title">Automação documental com IA</h3>
+            <p data-i18n="s2.text">A IA lê os documentos de cada processo e preenche relatórios, minutas e folhas de cálculo com regras estritas: só dados que constam dos documentos, conflitos assinalados e validação independente.</p>
+            <ul class="ticks">
+              <li data-i18n="s2.l1">Relatórios de avaliação imobiliária</li>
+              <li data-i18n="s2.l2">Documentos de licenciamento de arquitetura</li>
+              <li data-i18n="s2.l3">Preenchimento de modelos e formulários</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 14v-3M11 14V9M15 14v-5M8 21h8" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 data-i18n="s3.title">Aplicações internas à medida</h3>
+            <p data-i18n="s3.text">Ferramentas simples, feitas à medida da forma como a sua equipa trabalha, em vez de folhas de cálculo dispersas e emails perdidos.</p>
+            <ul class="ticks">
+              <li data-i18n="s3.l1">Acompanhamento de projetos</li>
+              <li data-i18n="s3.l2">Painéis e indicadores</li>
+              <li data-i18n="s3.l3">Perfis e permissões por função</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CASOS ============================== -->
+    <section class="section" id="casos">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="cases.eyebrow">Casos</p>
+          <h2 data-i18n="cases.title">Trabalho real, problemas reais</h2>
+        </header>
+
+        <!-- Caso 1: Gestão de projetos -->
+        <article class="case">
+          <figure class="case-media">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span>Planner</span></div>
+              <img src="assets/img/planner-login.jpg" width="1280" height="800" loading="lazy"
+                   alt="Página de entrada da aplicação de planeamento de projetos" data-i18n-alt="case1.alt">
+            </div>
+            <figcaption data-i18n="case1.caption">Captura real da página de entrada.</figcaption>
+          </figure>
+          <div class="case-body">
+            <p class="case-kicker" data-i18n="case1.kicker">Gestão de projetos · Aplicação web</p>
+            <h3 data-i18n="case1.title">Planeamento de projetos de implementação</h3>
+            <dl class="psr">
+              <dt data-i18n="lbl.problem">Problema</dt>
+              <dd data-i18n="case1.problem">Projetos de implementação geridos em folhas e emails dispersos, sem visão clara do estado nem forma rápida de reportar.</dd>
+              <dt data-i18n="lbl.solution">Solução</dt>
+              <dd data-i18n="case1.solution">Desenvolvemos uma aplicação web com perfis de administrador, gestor de projeto e membro, para organizar tarefas e tempo no dia a dia e apresentar o estado semanal e mensal.</dd>
+              <dt data-i18n="lbl.result">Resultado</dt>
+              <dd data-i18n="case1.result">Um único sítio para planear, acompanhar e reportar cada implementação. <span class="ph">[resultado medido: preencher]</span></dd>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Caso 2: Imobiliário -->
+        <article class="case case-rev">
+          <figure class="case-media">
+            <img src="assets/img/valuation-flow.svg" width="640" height="400" loading="lazy"
+                 alt="Diagrama ilustrativo: documentos do processo, IA com regras, modelo do banco preenchido e relatório de validação" data-i18n-alt="case2.alt">
+            <figcaption data-i18n="case2.caption">Ilustração genérica do fluxo. Não são documentos de clientes.</figcaption>
+          </figure>
+          <div class="case-body">
+            <p class="case-kicker" data-i18n="case2.kicker">Imobiliário · Automação com IA</p>
+            <h3 data-i18n="case2.title">Relatórios de avaliação para bancos</h3>
+            <dl class="psr">
+              <dt data-i18n="lbl.problem">Problema</dt>
+              <dd data-i18n="case2.problem">Uma pequena empresa de avaliação imobiliária gastava horas por processo a copiar dados de cadernetas, certidões, plantas e portais para os modelos de relatório exigidos por cada banco.</dd>
+              <dt data-i18n="lbl.solution">Solução</dt>
+              <dd data-i18n="case2.solution">Criámos automações com IA que preenchem os modelos dos bancos a partir dos documentos do caso, com regras estritas: só dados literais, hierarquia para resolver conflitos, fórmulas e estrutura do modelo intocadas, relatório de omissões e conflitos e validação independente depois do preenchimento.</dd>
+              <dt data-i18n="lbl.result">Resultado</dt>
+              <dd><span data-i18n="case2.result">Menos trabalho repetitivo, e cada omissão ou conflito fica assinalado para o avaliador decidir.</span>
+                <span class="metrics">
+                  <span class="metric"><b data-i18n="m.time">Tempo</b><span class="ph" data-i18n="case2.m1">[X h → Y min por relatório]</span></span>
+                  <span class="metric"><b data-i18n="m.errors">Erros</b><span class="ph" data-i18n="case2.m2">[taxa de erro: preencher]</span></span>
+                </span>
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Caso 3: Arquitetura -->
+        <article class="case">
+          <figure class="case-media">
+            <img src="assets/img/licensing-flow.svg" width="640" height="400" loading="lazy"
+                 alt="Diagrama ilustrativo: pasta do processo e regulamentos, IA, documentos de licenciamento" data-i18n-alt="case3.alt">
+            <figcaption data-i18n="case3.caption">Ilustração genérica do fluxo. Não são documentos de clientes.</figcaption>
+          </figure>
+          <div class="case-body">
+            <p class="case-kicker" data-i18n="case3.kicker">Arquitetura · Automação com IA</p>
+            <h3 data-i18n="case3.title">Documentos de licenciamento urbanístico</h3>
+            <dl class="psr">
+              <dt data-i18n="lbl.problem">Problema</dt>
+              <dd data-i18n="case3.problem">Num gabinete de arquitetura, as memórias descritivas e outros textos de licenciamento eram redigidos à mão em cada processo, com muita repetição e risco de falhas face aos regulamentos.</dd>
+              <dt data-i18n="lbl.solution">Solução</dt>
+              <dd data-i18n="case3.solution">A IA gera os documentos de texto de licenciamento de forma consistente e repetível a partir das pastas do caso: documentos do cliente e regulamentos aplicáveis.</dd>
+              <dt data-i18n="lbl.result">Resultado</dt>
+              <dd><span data-i18n="case3.result">Documentos consistentes, prontos para revisão do arquiteto.</span>
+                <span class="metrics">
+                  <span class="metric"><b data-i18n="m.time">Tempo</b><span class="ph" data-i18n="case3.m1">[X h → Y min por documento]</span></span>
+                  <span class="metric"><b data-i18n="m.quality">Qualidade</b><span class="ph" data-i18n="case3.m2">[resultado: preencher]</span></span>
+                </span>
+              </dd>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== MÉTODO ============================== -->
+    <section class="section section-alt" id="metodo">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="method.eyebrow">Como trabalhamos</p>
+          <h2 data-i18n="method.title">Passos pequenos, risco controlado</h2>
+          <p class="section-lead" data-i18n="method.lead">Pensado para pequenas empresas: começamos pelo que mais trava a operação e só avançamos quando há resultados à vista.</p>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n">1</span>
+            <h3 data-i18n="m1.title">Diagnóstico</h3>
+            <p data-i18n="m1.text">Falamos com a gestão e com quem faz o trabalho, mapeamos o processo e medimos o ponto de partida. Identificamos o bloqueio e partimos o objetivo em tarefas concretas. Sai uma proposta clara, com prioridades e custo.</p>
+          </li>
+          <li class="step">
+            <span class="step-n">2</span>
+            <h3 data-i18n="m2.title">Piloto</h3>
+            <p data-i18n="m2.text">Resolvemos o bloqueio num caso real, em poucas semanas. Testamos a solução com casos reais e comparamos o antes e o depois, para decidir com factos se vale a pena continuar.</p>
+          </li>
+          <li class="step">
+            <span class="step-n">3</span>
+            <h3 data-i18n="m3.title">Implementação e formação</h3>
+            <p data-i18n="m3.text">Alargamos ao resto da operação com procedimentos normalizados, formação e materiais de apoio para que a equipa ganhe autonomia. Continuamos a medir e a afinar.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== SOBRE ============================== -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about-head">
+          <p class="eyebrow" data-i18n="about.eyebrow">Sobre</p>
+          <h2>Go Live Way</h2>
+          <p class="about-role" data-i18n="about.role">Consultoria em processos, sistemas e automação com IA · Porto</p>
+        </div>
+        <div class="about-body">
+          <p data-i18n="about.p1">Somos uma equipa que trabalha entre as operações e a tecnologia. A nossa experiência vem do terreno:</p>
+          <ul class="timeline">
+            <li><b data-i18n="about.k1">Operações e logística</b><span data-i18n="about.t1">Anos de trabalho em operações e logística, do lado de quem vive os processos todos os dias.</span></li>
+            <li><b data-i18n="about.k2">Implementação de sistemas</b><span data-i18n="about.t2">Projetos completos de implementação de software de gestão: requisitos, configuração, validação de dados e arranque.</span></li>
+            <li><b data-i18n="about.k3">Processos e projetos</b><span data-i18n="about.t3">Mapeamento de processos, definição de requisitos com os utilizadores, gestão de backlog e de projetos.</span></li>
+            <li><b data-i18n="about.k4">Dados e análise</b><span data-i18n="about.t4">Análise e validação de dados para apoiar decisões sempre que necessário.</span></li>
+            <li><b data-i18n="about.k5">Formação e mudança</b><span data-i18n="about.t5">Testes de aceitação, formação de utilizadores e acompanhamento da mudança nas equipas.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACTO ============================== -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-box">
+        <div>
+          <h2 data-i18n="contact.title">Vamos ver onde a sua operação perde tempo?</h2>
+          <p data-i18n="contact.text">Marque uma chamada de 30 minutos, sem compromisso. Sai da conversa com uma ideia clara do que pode ser otimizado ou automatizado e por onde começar.</p>
+        </div>
+        <div class="contact-actions">
+          <button type="button" class="btn btn-primary btn-lg" data-open-contact data-i18n="cta.call">Marcar chamada de 30 min</button>
+          <a class="contact-line" data-link="updates" href="#contacto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span data-i18n="contact.updates">Acompanhar atualizações</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© 2026 Go Live Way</span>
+      <span data-i18n="footer.tag">Automação com IA e sistemas para empresas · Porto, Portugal</span>
+      <a href="#topo" data-i18n="footer.top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-modal-title">
+    <div class="contact-modal-panel">
+      <button type="button" class="contact-modal-close" data-close-contact aria-label="Fechar" data-i18n-aria="form.close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <h2 id="contact-modal-title" data-i18n="form.title">Marcar chamada de 30 min</h2>
+      <p class="contact-modal-lead" data-i18n="form.lead">Deixe os seus dados e uma breve descrição. Respondemos para agendar a conversa.</p>
+      <form id="contact-form" novalidate>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="contact-name" data-i18n="form.name">Nome</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="contact-phone"><span data-i18n="form.phone">Telefone</span> <span class="opt" data-i18n="form.optional">(opcional)</span></label>
+          <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="contact-email" data-i18n="form.email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="contact-description" data-i18n="form.description">Descrição</label>
+          <textarea id="contact-description" name="description" rows="4" required></textarea>
+        </div>
+        <p class="form-status" id="contact-form-status" role="status" aria-live="polite" hidden></p>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-lg" data-i18n="form.submit">Enviar pedido</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

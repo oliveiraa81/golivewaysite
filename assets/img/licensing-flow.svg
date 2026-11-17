@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8FD8FF"/><stop offset="1" stop-color="#3A9EEA"/></linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#8EA9C2"/></marker>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0B2A45" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="640" height="400" rx="14" fill="#f7f9fc" fill-opacity=".0"/>
+  <!-- pastas -->
+  <g filter="url(#s)">
+    <g transform="translate(36 80)"><path d="M0 12a8 8 0 0 1 8-8h34l10 12h52a8 8 0 0 1 8 8v70a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8z" fill="#8FD8FF"/><path d="M0 30h112v64a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8z" fill="#6CC7F7"/>
+      <g transform="translate(22 46)"><rect width="30" height="38" rx="3" fill="#fff"/><path d="M6 10h18M6 17h18M6 24h12" stroke="#C6DAEA" stroke-width="3" stroke-linecap="round"/></g>
+      <g transform="translate(60 46)"><rect width="30" height="38" rx="3" fill="#fff"/><path d="M5 30 L15 10 L25 30z" fill="none" stroke="#8EA9C2" stroke-width="2.5"/></g></g>
+    <g transform="translate(36 224)"><path d="M0 12a8 8 0 0 1 8-8h34l10 12h52a8 8 0 0 1 8 8v70a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8z" fill="#3A9EEA"/><path d="M0 30h112v64a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8z" fill="#1A73BA"/>
+      <g transform="translate(22 44)" fill="none" stroke="#fff" stroke-width="3"><path d="M34 4 L34 44"/><path d="M14 14h40M18 14l-8 16h16zM50 14l-8 16h16z"/><path d="M22 46h24"/></g></g>
+  </g>
+  <path d="M156 136 C 200 136, 210 190, 246 196" fill="none" stroke="#8EA9C2" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <path d="M156 280 C 200 280, 210 220, 246 212" fill="none" stroke="#8EA9C2" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <!-- motor IA -->
+  <g filter="url(#s)">
+    <rect x="252" y="130" width="140" height="150" rx="22" fill="#0B2A45"/>
+    <path d="M322 168 l9 22 22 9 -22 9 -9 22 -9 -22 -22 -9 22 -9z" fill="url(#g)"/>
+    <path d="M354 162 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#8FD8FF"/>
+    <g transform="translate(286 248)"><rect width="72" height="12" rx="6" fill="#173C5E"/><rect width="52" height="12" rx="6" fill="url(#g)"/></g>
+  </g>
+  <path d="M396 205 L 440 205" fill="none" stroke="#8EA9C2" stroke-width="2" marker-end="url(#a)"/>
+  <!-- documentos Word -->
+  <g filter="url(#s)">
+    <g transform="translate(486 70)"><path d="M0 0h92l22 22v176H0z" fill="#fff" stroke="#D3E3F0"/></g>
+    <g transform="translate(468 88)"><path d="M0 0h92l22 22v176H0z" fill="#fff" stroke="#D3E3F0"/><path d="M92 0v22h22" fill="none" stroke="#D3E3F0"/>
+      <rect x="12" y="12" width="44" height="18" rx="4" fill="#1A73BA"/><path d="M20 21h28" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+      <rect x="12" y="44" width="70" height="8" rx="4" fill="#0B2A45"/>
+      <g fill="#C6DAEA"><rect x="12" y="62" width="90" height="6" rx="3"/><rect x="12" y="74" width="84" height="6" rx="3"/><rect x="12" y="86" width="88" height="6" rx="3"/><rect x="12" y="98" width="60" height="6" rx="3"/></g>
+      <rect x="12" y="116" width="50" height="7" rx="3.5" fill="#2E4A63"/>
+      <g fill="#C6DAEA"><rect x="12" y="132" width="90" height="6" rx="3"/><rect x="12" y="144" width="82" height="6" rx="3"/><rect x="12" y="156" width="88" height="6" rx="3"/><rect x="12" y="168" width="54" height="6" rx="3"/></g>
+    </g>
+  </g>
+  <circle cx="574" cy="296" r="16" fill="#3A9EEA"/><path d="M566 296l6 6 10-11" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

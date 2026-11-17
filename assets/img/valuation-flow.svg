@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8FD8FF"/><stop offset="1" stop-color="#3A9EEA"/></linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#8EA9C2"/></marker>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0B2A45" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="640" height="400" rx="14" fill="#f7f9fc" fill-opacity=".0"/>
+  <!-- documentos -->
+  <g filter="url(#s)">
+    <g transform="translate(40 58)"><path d="M0 0h70l18 18v78H0z" fill="#fff" stroke="#D3E3F0"/><path d="M70 0v18h18" fill="none" stroke="#D3E3F0"/><rect x="10" y="62" width="38" height="18" rx="4" fill="#e5484d"/><text x="29" y="75" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">PDF</text><path d="M10 28h60M10 38h52M10 48h44" stroke="#C6DAEA" stroke-width="4" stroke-linecap="round"/></g>
+    <g transform="translate(56 168)"><path d="M0 0h70l18 18v78H0z" fill="#fff" stroke="#D3E3F0"/><path d="M70 0v18h18" fill="none" stroke="#D3E3F0"/><rect x="10" y="62" width="38" height="18" rx="4" fill="#e5484d"/><text x="29" y="75" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">PDF</text><path d="M10 28h60M10 38h52M10 48h44" stroke="#C6DAEA" stroke-width="4" stroke-linecap="round"/></g>
+    <g transform="translate(40 278)"><path d="M0 0h70l18 18v64H0z" fill="#fff" stroke="#D3E3F0"/><path d="M70 0v18h18" fill="none" stroke="#D3E3F0"/><rect x="10" y="48" width="38" height="18" rx="4" fill="#3A9EEA"/><circle cx="62" cy="30" r="9" fill="none" stroke="#8EA9C2" stroke-width="3"/><path d="M62 39v8" stroke="#8EA9C2" stroke-width="3"/></g>
+  </g>
+  <path d="M140 110 C 190 110, 200 190, 238 196" fill="none" stroke="#8EA9C2" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <path d="M154 216 L 238 204" fill="none" stroke="#8EA9C2" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <path d="M140 316 C 190 316, 200 220, 238 212" fill="none" stroke="#8EA9C2" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)"/>
+  <!-- motor IA -->
+  <g filter="url(#s)">
+    <rect x="244" y="130" width="150" height="150" rx="22" fill="#0B2A45"/>
+    <path d="M319 160 l9 22 22 9 -22 9 -9 22 -9 -22 -22 -9 22 -9z" fill="url(#g)"/>
+    <path d="M352 158 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#8FD8FF"/>
+    <g transform="translate(266 236)" stroke="#8FD8FF" stroke-width="2.4" fill="none" stroke-linecap="round">
+      <path d="M0 6l4 4 8-8"/><path d="M20 6h28" stroke="#2A4D6E"/>
+      <path d="M58 6l4 4 8-8"/><path d="M78 6h28" stroke="#2A4D6E"/>
+      <path d="M0 22l4 4 8-8"/><path d="M20 22h28" stroke="#2A4D6E"/>
+      <path d="M58 22l4 4 8-8"/><path d="M78 22h28" stroke="#2A4D6E"/>
+    </g>
+  </g>
+  <path d="M398 190 L 446 150" fill="none" stroke="#8EA9C2" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M398 226 L 446 286" fill="none" stroke="#8EA9C2" stroke-width="2" marker-end="url(#a)"/>
+  <!-- modelo preenchido -->
+  <g filter="url(#s)" transform="translate(452 54)">
+    <rect width="156" height="170" rx="10" fill="#fff" stroke="#D3E3F0"/>
+    <rect width="156" height="26" rx="10" fill="#1A73BA"/><rect y="16" width="156" height="10" fill="#1A73BA"/>
+    <g fill="#fff" opacity=".85"><rect x="12" y="9" width="8" height="8" rx="1.5"/><rect x="23" y="9" width="8" height="8" rx="1.5"/><rect x="34" y="9" width="8" height="8" rx="1.5"/></g>
+    <g stroke="#DCE8F2"><path d="M0 52h156M0 78h156M0 104h156M0 130h156M52 26v144M104 26v144"/></g>
+    <g fill="#DDF1FF"><rect x="54" y="28" width="48" height="22"/><rect x="106" y="54" width="48" height="22"/><rect x="54" y="80" width="48" height="22"/><rect x="106" y="106" width="48" height="22"/><rect x="54" y="132" width="48" height="22"/></g>
+    <g fill="#8EA9C2"><rect x="8" y="36" width="34" height="6" rx="3"/><rect x="8" y="62" width="30" height="6" rx="3"/><rect x="8" y="88" width="36" height="6" rx="3"/><rect x="8" y="114" width="28" height="6" rx="3"/><rect x="8" y="140" width="32" height="6" rx="3"/></g>
+    <g fill="#1A73BA"><rect x="62" y="36" width="28" height="6" rx="3"/><rect x="114" y="62" width="30" height="6" rx="3"/><rect x="62" y="88" width="24" height="6" rx="3"/><rect x="114" y="114" width="26" height="6" rx="3"/><rect x="62" y="140" width="30" height="6" rx="3"/></g>
+    
+  </g>
+  <!-- relatório de validação -->
+  <g filter="url(#s)" transform="translate(452 250)">
+    <rect width="156" height="104" rx="10" fill="#fff" stroke="#D3E3F0"/>
+    <circle cx="22" cy="24" r="10" fill="#3A9EEA"/><path d="M17 24l4 4 7-7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <rect x="40" y="20" width="96" height="8" rx="4" fill="#C6DAEA"/>
+    <circle cx="22" cy="52" r="10" fill="#f5a524"/><path d="M22 46v7M22 57v.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="40" y="48" width="80" height="8" rx="4" fill="#C6DAEA"/>
+    <circle cx="22" cy="80" r="10" fill="#3A9EEA"/><path d="M17 80l4 4 7-7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <rect x="40" y="76" width="90" height="8" rx="4" fill="#C6DAEA"/>
+  </g>
+</svg>
